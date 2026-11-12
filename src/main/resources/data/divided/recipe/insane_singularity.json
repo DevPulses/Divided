@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "divided:insane_alloy"
+    }
+  },
+  "result": {
+    "id": "divided:insane_singularity",
+    "count": 1
+  }
+}

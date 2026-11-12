@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BLB",
+    "B B",
+    "B B"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "L": {
+      "item": "minecraft:netherite_leggings"
+    }
+  },
+  "result": {
+    "id": "divided:sweatpants",
+    "count": 1
+  }
+}

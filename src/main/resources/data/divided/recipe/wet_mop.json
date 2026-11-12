@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wet_sponge"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "divided:wet_mop",
+    "count": 1
+  }
+}

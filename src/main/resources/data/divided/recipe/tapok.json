@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S S",
+    "SRS",
+    "BBB"
+  ],
+  "key": {
+    "S": {
+      "item": "divided:insane_singularity"
+    },
+    "R": {
+      "item": "divided:dads_belt"
+    },
+    "B": {
+      "item": "minecraft:bedrock"
+    }
+  },
+  "result": {
+    "id": "divided:tapok",
+    "count": 1
+  }
+}

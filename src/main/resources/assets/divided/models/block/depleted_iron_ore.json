@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "divided:block/depleted_iron_ore"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    "FHF",
+    "   "
+  ],
+  "key": {
+    "F": {
+      "item": "divided:insane_alloy"
+    },
+    "H": {
+      "item": "minecraft:netherite_helmet"
+    }
+  },
+  "result": {
+    "id": "divided:tinfoil_hat",
+    "count": 1
+  }
+}

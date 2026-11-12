@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    "CAC",
+    " G "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass_bottle"
+    },
+    "C": {
+      "item": "minecraft:sea_pickle"
+    },
+    "A": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "id": "divided:pickle_jar",
+    "count": 1
+  }
+}

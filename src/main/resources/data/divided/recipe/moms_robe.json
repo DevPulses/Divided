@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S S",
+    "SMS",
+    "STS"
+  ],
+  "key": {
+    "S": {
+      "item": "divided:insane_singularity"
+    },
+    "M": {
+      "item": "divided:white_tank_top"
+    },
+    "T": {
+      "item": "divided:sweatpants"
+    }
+  },
+  "result": {
+    "id": "divided:moms_robe",
+    "count": 1
+  }
+}

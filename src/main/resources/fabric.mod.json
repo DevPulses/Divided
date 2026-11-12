@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "divided",
+  "version": "${version}",
+  "name": "Divided",
+  "description": "A legendary endgame infinity mod featuring Holy, Corrupted and Insane tiers of balance.",
+  "authors": [
+    "Divided Team"
+  ],
+  "contact": {
+    "homepage": "https://github.com/divided-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/divided/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.divided.DividedMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

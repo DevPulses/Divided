@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "divided:block/quantum_compressor"
+    }
+  }
+}
