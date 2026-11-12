@@ -7,9 +7,9 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -20,13 +20,14 @@ public class MopWeaponItem extends Item {
     }
 
     @Override
-    public ActionResult use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack stack = user.getStackInHand(hand);
         if (!world.isClient) {
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
                     SoundEvents.ITEM_BUCKET_EMPTY, SoundCategory.PLAYERS, 2.0f, 1.0f);
             user.sendMessage(Text.literal("Вы помыли пол! Мобы в радиусе 10 блоков поскальзываются и падают!").formatted(Formatting.AQUA), true);
         }
-        return ActionResult.SUCCESS;
+        return TypedActionResult.success(stack);
     }
 
     @Override

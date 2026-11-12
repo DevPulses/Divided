@@ -7,9 +7,9 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -20,12 +20,12 @@ public class TVRemoteItem extends Item {
     }
 
     @Override
-    public ActionResult use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack stack = user.getStackInHand(hand);
         if (!world.isClient) {
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
                     SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.PLAYERS, 2.0f, 1.5f);
 
-            // Переключение погоды или времени суток кликом пульта!
             if (world.isRaining()) {
                 world.getLevelProperties().setRaining(false);
                 user.sendMessage(Text.literal("Канал переключен: Погода ясная").formatted(Formatting.AQUA), true);
@@ -34,7 +34,7 @@ public class TVRemoteItem extends Item {
                 user.sendMessage(Text.literal("Канал переключен: Включен дождь").formatted(Formatting.BLUE), true);
             }
         }
-        return ActionResult.SUCCESS;
+        return TypedActionResult.success(stack);
     }
 
     @Override

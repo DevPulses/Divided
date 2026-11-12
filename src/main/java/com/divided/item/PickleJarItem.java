@@ -8,9 +8,9 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -21,19 +21,18 @@ public class PickleJarItem extends Item {
     }
 
     @Override
-    public ActionResult use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         if (!world.isClient) {
-            // Питьё рассола восстанавливает здоровье и голод
             user.getHungerManager().add(20, 20.0f);
-            user.heal(40.0f); // 20 сердец
-            user.clearStatusEffects(); // Снимает любое похмелье и дебаффы
+            user.heal(40.0f);
+            user.clearStatusEffects();
 
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
                     SoundEvents.ENTITY_GENERIC_DRINK, SoundCategory.PLAYERS, 1.5f, 1.0f);
             user.sendMessage(Text.literal("Выпили рассол из 3-литровой банки! Полная бодрость!").formatted(Formatting.GREEN, Formatting.BOLD), true);
         }
-        return ActionResult.SUCCESS;
+        return TypedActionResult.success(stack);
     }
 
     @Override

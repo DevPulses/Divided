@@ -20,13 +20,13 @@ public class PlumberSanyaBossEntity extends HostileEntity {
         this.bossBar = (ServerBossBar) new ServerBossBar(
                 Text.literal("§6§lСАНТЕХНИК САНЯ (ПОВЕЛИТЕЛЬ РЖАВЫХ ТРУБ)§r"),
                 BossBar.Color.YELLOW,
-                BossBar.Overlay.NOTCHED_10
+                BossBar.Style.NOTCHED_10
         );
     }
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return HostileEntity.createHostileAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 15000.0) // 15 000 ХП
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 15000.0)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.40)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 200.0)
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1.0);
