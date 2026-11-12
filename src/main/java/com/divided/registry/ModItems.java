@@ -1,6 +1,7 @@
 package com.divided.registry;
 
 import com.divided.DividedMod;
+import com.divided.item.DadsBeltItem;
 import com.divided.item.MopWeaponItem;
 import com.divided.item.PickleJarItem;
 import com.divided.item.TVRemoteItem;
@@ -47,9 +48,9 @@ public class ModItems {
     public static final Item INSANE_SINGULARITY = registerItem("insane_singularity",
             new Item(new Item.Settings().rarity(Rarity.EPIC).fireproof()));
 
-    // 🎖️ Оружие и Инструменты
+    // 🎖️ Батин Ремень (Боевое оружие)
     public static final Item DADS_BELT = registerItem("dads_belt",
-            new Item(new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
+            new DadsBeltItem(new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item INSANE_DRILL = registerItem("insane_drill",
             new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC).fireproof()));
@@ -71,7 +72,6 @@ public class ModItems {
     public static final Item SOVIET_DOOR_KEY = registerItem("soviet_door_key",
             new Item(new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 
-    // 🔧 Гаечный ключ Сантехника Сани
     public static final Item SANYA_WRENCH = registerItem("sanya_wrench",
             new Item(new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 

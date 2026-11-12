@@ -16,6 +16,9 @@
   "entrypoints": {
     "main": [
       "com.divided.DividedMod"
+    ],
+    "client": [
+      "com.divided.client.DividedClientMod"
     ]
   },
   "depends": {
