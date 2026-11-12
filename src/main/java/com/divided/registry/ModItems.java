@@ -7,7 +7,6 @@ import com.divided.item.PickleJarItem;
 import com.divided.item.TVRemoteItem;
 import com.divided.item.TapokItem;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -19,26 +18,26 @@ public class ModItems {
     public static final Item TAPOK = registerItem("tapok",
             new TapokItem(new Item.Settings().maxCount(1).rarity(Rarity.EPIC).fireproof()));
 
-    // 🌸 Мамин Халат
+    // 🌸 Мамин Халат (своя кастомная текстура брони)
     public static final Item MOMS_ROBE = registerItem("moms_robe",
-            new ArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE,
+            new ArmorItem(ModArmorMaterials.MOMS_ROBE, ArmorItem.Type.CHESTPLATE,
                     new Item.Settings().maxCount(1).rarity(Rarity.EPIC).fireproof()));
 
     // 🧢 Батин Комплект
     public static final Item TINFOIL_HAT = registerItem("tinfoil_hat",
-            new ArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.HELMET,
+            new ArmorItem(ModArmorMaterials.TINFOIL, ArmorItem.Type.HELMET,
                     new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item WHITE_TANK_TOP = registerItem("white_tank_top",
-            new ArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE,
+            new ArmorItem(ModArmorMaterials.DADS_SUIT, ArmorItem.Type.CHESTPLATE,
                     new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item SWEATPANTS = registerItem("sweatpants",
-            new ArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.LEGGINGS,
+            new ArmorItem(ModArmorMaterials.DADS_SUIT, ArmorItem.Type.LEGGINGS,
                     new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item SLIPPERS = registerItem("slippers",
-            new ArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.BOOTS,
+            new ArmorItem(ModArmorMaterials.DADS_SUIT, ArmorItem.Type.BOOTS,
                     new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 
     // 🌀 Ебанутые Материалы
@@ -48,7 +47,7 @@ public class ModItems {
     public static final Item INSANE_SINGULARITY = registerItem("insane_singularity",
             new Item(new Item.Settings().rarity(Rarity.EPIC).fireproof()));
 
-    // 🎖️ Батин Ремень (Боевое оружие)
+    // 🎖️ Батин Ремень
     public static final Item DADS_BELT = registerItem("dads_belt",
             new DadsBeltItem(new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 
@@ -81,5 +80,6 @@ public class ModItems {
 
     public static void registerModItems() {
         DividedMod.LOGGER.info("Registering Items for " + DividedMod.MOD_ID);
+        ModArmorMaterials.registerArmorMaterials();
     }
 }
